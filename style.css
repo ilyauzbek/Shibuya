@@ -96,60 +96,61 @@ body {
   }
 }
 
-.hero__wrapper{
-    text-align: center;
+.hero__wrapper {
+  text-align: center;
 
-    h1{
-        font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
-        line-height: 1;
+  h1 {
+    font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
+    line-height: 1;
 
-        @media (max-width:480px) {
-            padding: 20px 0 0;
-        }
+    @media (max-width:480px) {
+      padding: 20px 0 0;
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (max-width:480px) {
+      padding: 20px 0;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @media (max-width:480px) {
+      &:first-child {
+        display: none;
+      }
+
+      justify-content: center;
     }
 
-    p{
-        margin-bottom: 30px;
-        font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
-        font-weight: 600;
-        text-transform: uppercase;
+  }
 
-        @media (max-width:480px) {
-            padding: 20px 0;
-        }
-    }
-
-    div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-
-        @media (max-width:480px) {
-            &:first-child{
-                display: none;
-            }
-            justify-content: center;
-        }
-
-    }
-
-    img{
-        width: 100%;
-    }
-}
-
-
-
-.swiper-slide {
-  img{
+  img {
     width: 100%;
   }
 }
 
 
-.album{
-  .container{
+
+.swiper-slide {
+  img {
+    width: 100%;
+  }
+}
+
+
+.album {
+  .container {
     max-width: 1900px;
   }
 }
@@ -158,24 +159,24 @@ body {
 .meet__wrapper {
 
   display: grid;
-  grid-template-columns:1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 50px;
 
   @media (max-width: 800px) {
     /* grid-template-columns: 1fr; */
-    
+
 
     display: flex;
     flex-direction: column;
 
   }
 
-  img{
+  img {
     padding-top: 16px;
     width: 100%;
   }
 
-  p{
+  p {
     margin-top: 15px;
     font-size: 22px;
     font-weight: 400;
@@ -184,11 +185,11 @@ body {
   }
 }
 
-.meet__right{
+.meet__right {
 
 
 
-  h2{
+  h2 {
     /* font-size: 170px; */
     font-size: clamp(3.25rem, 0.792rem + 9.83vw, 10.625rem);
     text-transform: uppercase;
@@ -197,11 +198,11 @@ body {
     @media (max-width: 800px) {
       text-align: center;
       padding-left: 0;
-      
+
     }
   }
 
-  p{
+  p {
     text-align: right;
     max-width: 800px;
     margin-left: auto;
@@ -211,25 +212,24 @@ body {
     @media (max-width: 800px) {
       text-align: center;
       margin-top: 30px;
-      
+
     }
   }
 }
 
-.meet{
+.meet {
   padding: 100px 0;
 }
 
 
-.China-1{
+.China-1 {
 
   @media (max-width: 800px) {
     display: none
-    
   }
 }
 
-.china-2{
+.china-2 {
   display: none;
 
   @media (max-width: 800px) {
@@ -237,4 +237,204 @@ body {
     width: 60%;
     margin: 30px auto;
   }
+}
+
+
+
+
+.our {}
+
+.container {}
+
+.our__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+
+}
+
+.our__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "card-1 card-2 card-4"
+    "card-1 card-3 card-5";
+
+    @media (max-width: 1000px) {
+
+      grid-template-rows: 1fr 1fr 1fr; 
+      gap: 20px 20px; 
+      grid-template-areas: 
+        "card-1 card-1"
+        "card-2 card-3"
+        "card-4 card-5"; 
+      
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+      grid-template-areas: 
+        "card-1"
+        "card-2"
+        "card-3"
+        "card-4"
+        "card-5"; 
+      
+    }
+
+  .card-1 {
+    grid-area: card-1;
+    background-image: url(./img/plans-1.png);
+  }
+
+  .card-2 {
+    grid-area: card-2;
+    background-image: url(./img/plans-2.png);
+  }
+
+  .card-3 {
+    grid-area: card-3;
+    background-image: url(./img/plans-3.png);
+  }
+
+  .card-4 {
+    grid-area: card-4;
+    background-image: url(./img/plans-4.png);
+  }
+
+  .card-5 {
+    grid-area: card-5;
+    background-image: url(./img/plans-5.png);
+  }
+}
+
+.our__card {
+  min-height: 350px;
+  border: 3px solid black;
+  display: flex;
+  padding: 30px;
+  justify-content: end;
+  flex-direction: column;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  text-transform: uppercase;
+
+  @media (max-width: 700px) {
+    min-height: 200px;
+    text-align: center;
+    
+  }
+
+
+  p{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    @media (max-width: 700px) {
+      height: auto;
+      
+    }
+  }
+
+  h3{
+    transition: 0.5s;
+  }
+
+
+  &:hover{
+    p{
+      height: 30px;
+    }
+
+    h3{
+      font-size: 40px;
+    }
+  }
+
+}
+
+.card-1 {}
+
+.card-2 {}
+
+.card-3 {}
+
+.card-4 {}
+
+.card-5 {}
+
+.our__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.team {
+  padding: 100px 0;
+}
+.team__wrapper {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  gap: 30px;
+}
+.team__wrap {
+
+  h2{
+    text-transform: uppercase;
+    font-size: 179px;
+  }
+}
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.team__card {
+  border: 3px solid black;
+  min-height: 250px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: end;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  padding: 25px;
+  color: rgb(255, 220, 145);
+  font-size: 30px;
+  font-weight: 600;
+
+  background-size: 120%;
+  transition: 0.6s;
+  
+
+  &:nth-child(1) {
+    background-image: url(./img/team-1.png);
+  }
+
+  &:nth-child(2) {
+    background-image: url(./img/team-2.png);
+  }
+
+  &:nth-child(3) {
+    background-image: url(./img/team-3.png);
+  }
+
+  &:nth-child(4) {
+    background-image: url(./img/team-4.png);
+  }
+}
+.team__img {
+  width: 100%;
 }
