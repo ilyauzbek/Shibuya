@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url(./img/bg-1.png);
+  background-image: url(./img/097\ 2.png);
   background-position: center;
   background-size: cover;
 }
@@ -102,6 +102,8 @@ body {
   h1 {
     font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
     line-height: 1;
+    z-index: -1;
+    position: relative;
 
     @media (max-width:480px) {
       padding: 20px 0 0;
@@ -126,6 +128,7 @@ body {
     margin-top: 20px;
 
     @media (max-width:480px) {
+
       &:first-child {
         display: none;
       }
@@ -264,12 +267,16 @@ body {
 
     @media (max-width: 1000px) {
 
-      grid-template-rows: 1fr 1fr 1fr; 
+      grid-template-columns: 1fr 1fr ; 
       gap: 20px 20px; 
       grid-template-areas: 
         "card-1 card-1"
         "card-2 card-3"
         "card-4 card-5"; 
+
+        align-items: center;
+        text-align: center;
+       
       
     }
     @media (max-width: 700px) {
@@ -383,23 +390,36 @@ body {
 .team__wrapper {
   display: grid;
   grid-template-columns: 10fr 1fr;
-  gap: 30px;
+  gap: 60px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    
+  }
 }
 .team__wrap {
 
   h2{
     text-transform: uppercase;
-    font-size: 179px;
+    /* font-size: 179px; */
+   font-size:  clamp(4.375rem, 2.159rem + 9.09vw, 11.25rem);
   }
 }
 .team__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 }
 .team__card {
   border: 3px solid black;
-  min-height: 250px;
+  /* min-height: 250px; */
+
+  aspect-ratio: 2/1;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -436,5 +456,59 @@ body {
   }
 }
 .team__img {
+  width: 100%;
+
+
+  @media (max-width: 1200px) {
+    display: none;
+    
+  }
+}
+
+
+
+
+.footer {
+}
+.footer__wrap {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+
+  @media (max-width:1200px ) {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__box {
+  > img{
+    width: 100%;
+  }
+}
+.footer__menu {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+
+  a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+
+  }
+}
+.footer__eyes {
+  border: 3px solid black;
+  width: 100%;
+}
+.footer__text {
   width: 100%;
 }
